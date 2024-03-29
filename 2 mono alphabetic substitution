@@ -1,0 +1,15 @@
+
+	2.	Monoalphabetic Substitution Cipher:
+
+def monoalphabetic_substitution_cipher(text, key):
+    table = str.maketrans("abcdefghijklmnopqrstuvwxyz", key)
+    return text.translate(table)
+
+def main():
+    text = input("Enter text to encrypt: ")
+    key = input("Enter substitution key (26 characters): ")
+    encrypted_text = monoalphabetic_substitution_cipher(text.lower(), key.lower())
+    print("Encrypted text:", encrypted_text)
+
+if __name__ == "__main__":
+    main()
